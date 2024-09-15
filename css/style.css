@@ -1,0 +1,72 @@
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* Estilos de Header */
+
+header{
+    background-color: #000000;
+    padding-bottom: 20px;
+}
+
+header nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a{
+    color:aliceblue;
+    text-decoration: none;
+}
+
+/* Estilos de main */
+main {
+    padding: 5%;
+}
+
+.main-banner{
+    text-align: center;
+}
+
+.category{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    margin: 1%;
+    padding: 0,5%;
+    text-align: center;
+}
+
+.category a p{
+    margin: 5%;
+}
+.home-about-us h3{
+    text-align: center;
+    margin: 2%;
+}
+
+/* Estilos de footer */
+
+footer{
+    background-color: #000000;
+    padding: 10px;
+    color: aliceblue;
+}
+
+footer section{
+    text-align: right;
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+}

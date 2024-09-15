@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>CONTACTANOS</title>
+</head>
+<body>
+
+    <header>
+        <!-- lOGO MIGHTY -->
+        <img src="../img/logo.jpg" alt="Logo Mighty Negro y Blanco">
+        <!-- Menú de navegación-->
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="conocenos.html">CONOCENOS</a></li>
+                <li><a href="tienda.html">TIENDA</a></li>
+                <li><a href="contactanos.html">CONTACTANOS</a></li>
+                <li><a href="personaliza_tu_hoodie.html">PERSONALIZA TU HOODIE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contact-us">
+        <section class="contact-section">
+            <h1>FORMULARIO DE CONTACTO</h1>
+            <!-- FORMULARIO -->
+            <div class="form-container">
+                <form>
+                    <fieldset>
+                        <legend>Completa tus datos</legend>
+                        
+                        <div>
+                            <!-- Campo para el registrar el nombre completo -->
+                            <label for="full-name">Nombre Completo</label>
+                            <input type="text" id="full-name" name="nombre-completo" required>
+                        </div>
+                        
+                        <div>
+                            <!-- Campo para el registrar el primer apellido -->
+                            <label for="first-surname">Primer Apellido</label>
+                            <input type="text" id="first-surname" name="primer-apellido" required>
+                        </div>
+                        
+                        <div>
+                            <!-- Campo para el registrar el segundo apellido -->
+                            <label for="second-surname">Segundo Apellido</label>
+                            <input type="text" id="second-surname" name="segundo-apellido">
+                        </div> 
+                        
+                        <div>
+                            <!-- Campo para el seleccionar el genero -->
+                            <label for="gender">Género</label>
+                            <select id="gender" name="genero" required>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <!-- Campo para seleccionar el tipo de documento -->
+                            <label for="document-type">Tipo de Documento</label>
+                            <select id="document-type" name="tipo-documento" required>
+                                <option value="CC">CC</option>
+                                <option value="NIT">NIT</option>
+                                <option value="passport">Pasaporte</option>
+                            </select> 
+                        </div> 
+                        
+                        <div>
+                            <!-- Campo para registrar el número de documento -->
+                            <label for="document-number">Documento</label>
+                            <input type="text" id="document-number" name="documento" required>
+                        </div> 
+                        
+                        <div>
+                            <!-- Campo para registrar el correo electronico -->
+                            <label for="email">Correo</label>
+                            <input type="email" id="email" name="correo" required>
+                        </div> 
+                        
+                        <div>
+                            <!-- Campo para registrar el número de telefono -->
+                            <label for="phone-number">Teléfono</label>
+                            <input type="tel" id="phone-number" name="telefono" required>
+                        </div>
+                        
+                        <div>
+                            <!-- Campo para registrar el mensaje -->
+                            <label for="menssage">Mensaje</label>
+                            <textarea id="menssage" name="mensaje" rows="4"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit">ENVIAR</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>  
+        </section>
+
+        <section class="location-section">
+            <h2>VISITA NUESTRA TIENDA</h2>
+            <div class="map-container">
+                <!-- Ubicación de la tienda -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2429752228509!2d-74.10863695180204!3d4.5990561990722165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9958925be567%3A0x9dc2682c6f070a92!2sMighty!5e0!3m2!1ses-419!2sco!4v1724618165049!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="address-container">
+                <p><strong>Dirección:</strong> Calle 8 Sur #31a-40, Bogotá</p>
+                <p><strong>Correo:</strong>mighty.colombia@gmail.com</p>
+                <p><strong>Teléfono:</strong> 313 209 01 33 </p>
+                <p><strong>Horario de Atención:</strong> Lunes a Sábado, 10:00 AM - 8:00 PM</p>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Pie de página -->
+    <footer>
+        <!-- Sección Redes Sociales -->
+        <section class="social-media">
+            <h3>REDES SOCIALES</h3>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="social-icon icon-facebook" href="https://www.facebook.com/profile.php?id=100087382941110" target="_blank" aria-label="Facebook"></a>
+                    </li>
+                    <li>
+                        <a class="social-icon icon-instagram" href="https://www.instagram.com/_mightycol/?hl=en" target="_blank" aria-label="Instagram"></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <p>Todos los derechos reservados &copy; 2024 Mighty</p>
+    </footer>
+</body>
+</html>
