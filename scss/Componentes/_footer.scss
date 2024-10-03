@@ -1,0 +1,180 @@
+/* Estilos de footer */
+footer {
+    background-color: $header-bg;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 0.04rem solid $hover-color;
+    color: $white;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem;
+        flex-wrap: nowrap;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: flex-start;
+        flex: 1;
+        font-size: 0.75rem;
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        flex: 1;
+        margin-right: 1rem;
+
+        h3 {
+            font-size: 0.875rem;
+            color: $white;
+            text-align: right;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+
+            li {
+                margin: 0 0.5rem;
+
+                a {
+                    width: 2rem;
+                    height: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $white;
+                    border-radius: 50%;
+
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    /* Estilo para los íconos RRSS */
+    .social-icon {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: cover;
+        margin-right: 0.5rem;
+
+        &.icon-facebook {
+            background-image: url();
+        }
+
+        &.icon-instagram {
+            background-image: url();
+        }
+    }
+
+    /* Media queries para pantallas medianas */
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-wrap: wrap; 
+            justify-content: center; 
+            text-align: center;
+        }
+
+        .footer-links, .social-media {
+            flex: 100%; 
+            justify-content: center;
+            margin-bottom: 1rem; 
+        }
+
+        .footer-links ul, .social-media ul {
+            justify-content: center; 
+        }
+
+        .footer-links ul li, .social-media ul li {
+            margin: 0 0.5rem; 
+        }
+
+        .footer-links {
+            font-size: 0.7rem; 
+        }
+
+        p {
+            font-size: 0.9rem; 
+        }
+    }
+
+    /* Media queries para pantallas pequeñas */
+    @media (max-width: 576px) {
+        .footer-content {
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+            padding: 0.5rem 0; 
+        }
+
+        .footer-links, .social-media {
+            align-items: center;
+            margin-bottom: 1rem; 
+        }
+
+        .footer-links ul, .social-media ul {
+            flex-direction: column; 
+            align-items: center;
+            gap: 0.5rem; 
+        }
+
+        .footer-links ul li, .social-media ul li {
+            margin: 0.25rem 0; 
+        }
+
+        .footer-links {
+            font-size: 0.65rem; 
+        }
+
+        p {
+            font-size: 0.85rem; 
+        }
+
+        .social-media h3 {
+            font-size: 0.75rem; 
+        }
+    }
+
+}

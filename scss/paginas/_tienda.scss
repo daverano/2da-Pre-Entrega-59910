@@ -1,0 +1,219 @@
+/* Estilos generales para la tienda */
+main.store {
+    margin-top: 4%;
+    background-color: $primary-color;
+
+    .our-products {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+
+        /* Título "Nuestros Productos" */
+        h1 {
+            font-size: 4rem;
+            color: $white;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            border-bottom: 0.18rem solid $primary-color;
+            height: 20%;
+            line-height: 4rem;
+            margin-top: 3.5%;
+        }
+    }
+
+    /* Sección de categorías - barra superior (solo para tienda) */
+    .categories {
+        margin-top: auto;
+        width: 100%;
+        background-color: $link-color;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+        height: 10%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+
+            li {
+                flex: 1;
+                text-align: center;
+                font-weight: bold;
+                font-size: 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    padding: 0.5rem 1rem;
+                    display: block;
+
+                    &:hover {
+                        color: $link-color;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Estilos generales de la clasificación */
+    .classification {
+        background-color: $white;
+        padding: 0.4rem 0;
+        display: flex;
+        justify-content: center;
+
+        .content-wrapper {
+            width: 90%;
+            max-width: 100%;
+        }
+    }
+
+    /* Estilos de títulos para las secciones de productos (solo en tienda) */
+    .product-section h2 {
+        text-align: center;
+        font-size: 1.75rem;
+        color: $primary-color;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* Estilos para la cuadrícula de productos (solo en tienda) */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    /* Estilos de cada producto */
+    .product-item {
+        background-color: $white;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: $primary-color;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+
+        p {
+            font-size: 0.875rem;
+            color: $second-color;
+            margin-bottom: 1rem;
+        }
+
+        /* Estilos para los botones */
+        button {
+            background-color: $Third-color;
+            color: $white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $Fourth-color;
+            }
+        }
+    }
+
+    /* Media queries para pantallas medianas (hasta 768px) */
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); /* Cambiamos a dos columnas */
+            gap: 2rem;
+        }
+
+        .our-products h1 {
+            font-size: 2rem; /* Reducimos el tamaño del título */
+            margin-top: 5%;
+        }
+
+        .categories ul li {
+            font-size: 0.9rem; /* Reducimos el tamaño de fuente de los enlaces */
+        }
+
+        .product-item {
+            h3 {
+                font-size: 1.1rem; /* Reducimos ligeramente el tamaño del título del producto */
+            }
+
+            img {
+                max-width: 250px; /* Ajustamos el tamaño máximo de la imagen */
+            }
+
+            p {
+                font-size: 0.8rem; /* Reducimos el tamaño del texto */
+            }
+
+            button {
+                font-size: 0.8rem; /* Reducimos el tamaño de los botones */
+                padding: 0.4rem 0.8rem;
+            }
+        }
+    }
+
+    /* Media queries para pantallas pequeñas (hasta 576px) */
+    @media (max-width: 576px) {
+        .product-grid {
+            grid-template-columns: 1fr; /* Cambiamos a una columna */
+            gap: 1.5rem;
+        }
+
+        .our-products h1 {
+            font-size: 2rem; /* Reducimos aún más el tamaño del título */
+            margin-top: 10%;
+        }
+
+        .categories ul li {
+            font-size: 0.85rem; /* Ajustamos el tamaño de fuente en móviles */
+        }
+
+        .product-item {
+            h3 {
+                font-size: 1rem; /* Reducimos el tamaño del título del producto */
+            }
+
+            img {
+                max-width: 200px; /* Reducimos aún más el tamaño de la imagen */
+            }
+
+            p {
+                font-size: 0.75rem; /* Reducimos el tamaño del texto */
+            }
+
+            button {
+                font-size: 0.75rem; /* Reducimos el tamaño de los botones */
+                padding: 0.3rem 0.6rem;
+            }
+        }
+    }
+}

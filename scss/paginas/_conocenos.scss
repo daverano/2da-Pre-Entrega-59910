@@ -1,0 +1,188 @@
+/* Estilos Main Conócenos */
+main.get-to-know-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    background-color: $white;
+
+    /* Estilos generales para la sección */
+    .get-to-know-us {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+
+        h1 {
+            position: absolute;
+            top: 25%; 
+            left: 50%;
+            transform: translateX(-50%); 
+            color: $white;
+            font-size: 4rem; 
+            font-weight: bold;  
+            z-index: 1;
+            text-align: center; 
+            max-width: 90%; 
+            margin-top: 0; 
+        }
+
+        img {
+            max-height: 800px;
+            height: 100%; 
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* Media queries para pantallas medianas (max-width: 768px) */
+    @media (max-width: 768px) {
+        .get-to-know-us {
+            h1 {
+                font-size: 2rem; /* Reducimos el tamaño del texto */
+                top: 25%; /* Ajustamos la posición superior */
+            }
+            img {
+                max-height: 350px; /* Reducimos la altura de la imagen */
+            }
+        }
+    }
+
+    /* Media queries para pantallas pequeñas (max-width: 576px) */
+    @media (max-width: 576px) {
+        .get-to-know-us {
+            h1 {
+                font-size: 1.75rem; /* Ajustamos más el tamaño del texto */
+                margin-top: 35%; /* Ajustamos la posición superior */
+            }
+            img {
+                max-height: 250px; /* Imagen más pequeña en pantallas pequeñas */
+            }
+        }
+    }
+
+}
+
+/* Estilos para la sección "Mighty" */
+main.get-to-know-us {
+    .Mighty {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        width: 100%;
+        margin-left: 4%;
+
+        h2 {
+            font-size: 2rem;
+            color: $link-color;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: $primary-color;
+            text-align: justify;
+        }
+
+        img {
+            max-height: 400px;
+            height: 100%;
+            width: 80%;
+            max-width: 80%;
+            align-self: center;
+            justify-self: center;
+        }
+
+        /* Media queries para pantallas medianas (max-width: 768px) */
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; /* Una columna en pantallas medianas */
+            img {
+                max-height: 300px; /* Ajustamos el tamaño de la imagen */
+            }
+            p {
+                font-size: 1.25rem; /* Reducimos el tamaño del texto */
+            }
+            h2 {
+                font-size: 1.75rem; /* Ajustamos el tamaño del título */
+            }
+        }
+
+        /* Media queries para pantallas pequeñas (max-width: 576px) */
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+            img {
+                max-height: 200px; /* Imagen más pequeña en pantallas pequeñas */
+            }
+            p {
+                font-size: 1.1rem; /* Reducimos aún más el tamaño del texto */
+            }
+            h2 {
+                font-size: 1.5rem; /* Título más pequeño */
+            }
+        }
+    }
+}
+
+/* Estilos para la sección de "Valores" */
+main.get-to-know-us {
+    .values {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
+        gap: 2rem;
+        width: 95%;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        /* Media queries p  ara pantallas medianas (max-width: 768px) */
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr; /* Cambiamos a dos columnas en pantallas medianas */
+        }
+
+        /* Media queries para pantallas pequeñas (max-width: 576px) */
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+            gap: 1rem; /* Reducimos el espacio entre las secciones */
+        }
+    }
+
+    .values-section {
+        h2 {
+            font-size: 1.5rem;
+            color: $link-color;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: $primary-color;
+            text-align: justify;
+            padding: 0.5rem;
+        }
+
+        img {
+            width: 100%;
+            margin: 1rem auto;
+            align-items: center;
+        }
+
+        /* Media queries para pantallas medianas (max-width: 768px) */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.25rem; /* Reducimos el tamaño del título */
+            }
+            p {
+                font-size: 1.1rem; /* Reducimos el tamaño del texto */
+            }
+        }
+
+        /* Media queries para pantallas pequeñas (max-width: 576px) */
+        @media (max-width: 576px) {
+            h2 {
+                font-size: 1.1rem; /* Título más pequeño */
+            }
+            p {
+                font-size: 1rem; /* Reducimos más el tamaño del texto */
+            }
+        }
+    }
+}
