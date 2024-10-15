@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>PERSONALIZA TU HOODDIE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
     <header>
         <!-- lOGO MIGHTY -->
-        <img src="../img/logo.jpg" alt="Logo Mighty Negro y Blanco">
+        <a href="../index.html">
+            <img src="../img/logo.jpg" alt="Logo Mighty Negro y Blanco">
+        </a>
         <!-- Menú de navegación-->
-        <nav aria-label="Menu principal">
+        <nav class="nav-desktop">
             <ul>
                 <li><a href="../index.html">HOME</a></li>
                 <li><a href="conocenos.html">CONOCENOS</a></li>
@@ -22,6 +25,22 @@
             </ul>
         </nav>
 
+        <!-- Menú Hamburguesa (Solo Mobile) -->
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <nav class="nav-mobile">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="conocenos.html">CONOCENOS</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="contactanos.html">CONTACTANOS</a></li>
+                    <li><a href="personaliza_tu_hoodie.html">PERSONALIZA TU HOODIE</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Contenido principal -->
@@ -39,24 +58,24 @@
                         <option value="gorra">Gorra</option>
                     </select>
                     <div class="design-preview">
-                        <img src="" alt="Vista previa del diseño">
+                        <img src="../img/Imagen_personzalia_tu_hoddie.png" alt="Vista previa del diseño">
                     </div>
                     <div class="design-options">
                         <!-- Opciones de diseño como iconos -->
-                        <button title="Añadir Texto"><img src="" alt="Icono de texto"></button>
-                        <button title="Cambiar color"><img src="" alt="Icono de color"></button>
-                        <button title="Cambiar fuente"><img src="" alt="Icono de fuente"></button>
-                        <button title="Añadir imagen"><img src="" alt="Icono de imagen"></button>
-                        <button title="Aumentar tamaño"><img src="" alt="Icono para aumentar tamaño"></button>
-                        <button title="Disminuir tamaño"><img src="" alt="Icono para disminuir tamaño"></button>
-                        <button title="Alinear a la izquierda"><img src="" alt="Icono de alineación izquierda"></button>
-                        <button title="Centrar"><img src="" alt="Icono de centrar"></button>
-                        <button title="Alinear a la derecha"><img src="" alt="Icono de alineación derecha"></button>
-                        <button title="Deshacer"><img src="" alt="Icono de deshacer"></button>
-                        <button title="Rehacer"><img src="" alt="Icono de rehacer"></button>
-                        <button title="Guardar diseño"><img src="" alt="Icono de guardar"></button>
-                        <button title="Previsualizar diseño"><img src="" alt="Icono de previsualización"></button>
-                        <button title="Restablecer diseño"><img src="" alt="Icono de restablecer"></button>
+                        <button title="Añadir Texto"><img src="../img/icono_texto.png" alt="Icono de texto"></button>
+                        <button title="Cambiar color"><img src="../img/icono_color.png" alt="Icono de color"></button>
+                        <button title="Cambiar fuente"><img src="../img/icono_fuente.png" alt="Icono de fuente"></button>
+                        <button title="Añadir imagen"><img src="../img/icono_imagen.png" alt="Icono de imagen"></button>
+                        <button title="Aumentar tamaño"><img src="../img/Icono_aumentar_tamaño.png" alt="Icono para aumentar tamaño"></button>
+                        <button title="Disminuir tamaño"><img src="../img/Icono_disminuir_tamaño.png" alt="Icono para disminuir tamaño"></button>
+                        <button title="Alinear a la izquierda"><img src="../img/Icono_alinear_izquierda.png" alt="Icono de alineación izquierda"></button>
+                        <button title="Centrar"><img src="../img/Icono_centrar.png" alt="Icono de centrar"></button>
+                        <button title="Alinear a la derecha"><img src="../img/Icono_alinear_derecha.png" alt="Icono de alineación derecha"></button>
+                        <button title="Deshacer"><img src="../img/Icono_deshacer.png" alt="Icono de deshacer"></button>
+                        <button title="Rehacer"><img src="../img/Icono_rehacer.png" alt="Icono de rehacer"></button>
+                        <button title="Guardar diseño"><img src="../img/Icono_guardar.png" alt="Icono de guardar"></button>
+                        <button title="Previsualizar diseño"><img src="../img/Icono_previsualizacion.png" alt="Icono de previsualización"></button>
+                        <button title="Restablecer diseño"><img src="../img/Icono_restablecer.png" alt="Icono de restablecer"></button>
                     </div>
                 </div>
             </div>
@@ -156,8 +175,8 @@
                 <h3>REDES SOCIALES</h3>
                 <nav>
                     <ul>
-                        <li><a href="https://www.facebook.com/profile.php?id=100087382941110" target="_blank" aria-label="Facebook"><img src="path-to-facebook-icon.png" alt="Facebook"></a></li>
-                        <li><a href="https://www.instagram.com/_mightycol/?hl=en" target="_blank" aria-label="Instagram"><img src="path-to-instagram-icon.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100087382941110" target="_blank" aria-label="Facebook"><img src="../img/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://www.instagram.com/_mightycol/?hl=en" target="_blank" aria-label="Instagram"><img src="../img/instagram.png" alt="Instagram"></a></li>
                     </ul>
                 </nav>
             </section>

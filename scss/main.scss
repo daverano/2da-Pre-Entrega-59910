@@ -1,0 +1,27 @@
+//import variables
+
+@import "utilidades/variables";
+
+// Reset 
+@import "utilidades/reset";
+
+// Estilos Generales 
+@import "utilidades/estilosgenerales";
+
+//Estilos de header
+@import "componentes/header";
+
+// Estilos de main Index 
+@import "paginas/home";
+
+// Estilos Main Conócenos
+@import "paginas/conocenos";
+
+//Estilos generales para la tienda
+@import "paginas/tienda";
+
+//Estilos específicos para la página de Personaliza tu Diseño 
+@import "paginas/personaliza_tu_hoddie";
+
+//Estilos de footer
+@import "componentes/footer";

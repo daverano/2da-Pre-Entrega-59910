@@ -1,0 +1,136 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+header {
+    background-color: $header-bg;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between; /* Ajuste para distribuir los elementos a los extremos */
+    align-items: center;
+    padding: 0 1rem; /* Ajuste de padding para que no quede tan pegado a los lados */
+
+    a {
+        display: inline-block;
+        text-decoration: none; /* Eliminar subrayado del enlace */
+    }
+
+    a img {
+        max-width: 35%;
+        object-fit: contain;
+        margin-right: auto; /* Asegura que el logo quede alineado a la izquierda */
+        clip-path: inset(35% 12% 35% 15%);
+    }
+
+    /* Menú de navegación tradicional (Desktop) */
+    .nav-desktop {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+
+            li {
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    font-weight: bold;
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Menú hamburguesa oculto por defecto en desktop */
+    .hamburger-menu {
+        display: none;
+
+        .menu-icon {
+            font-size: 2rem;
+            color: $white;
+            cursor: pointer;
+            margin-left: auto; /* Asegura que el menú hamburguesa quede alineado a la derecha */
+        }
+
+        .nav-mobile {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 100%;
+            background-color: $header-bg;
+            transition: all 0.3s ease-in-out;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+
+                li {
+                    padding: 1rem;
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        display: block;
+
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        #menu-toggle {
+            display: none; /* Ocultar el checkbox */
+        }
+
+        #menu-toggle:checked + .menu-icon + .nav-mobile {
+            display: block; /* Mostrar el menú móvil cuando está activado */
+        }
+    }
+
+    /* Media query para pantallas de hasta 768px */
+    @media (max-width: 768px) {
+        .nav-desktop {
+            display: none; /* Ocultar menú de escritorio en pantallas pequeñas */
+        }
+
+        .hamburger-menu {
+            display: block; /* Mostrar el menú hamburguesa en pantallas pequeñas */
+        }
+
+        a img {
+            max-width: 30%; /* Ajustar el tamaño del logo en pantallas pequeñas */
+        }
+    }
+
+    /* Media query para pantallas de hasta 576px */
+    @media (max-width: 576px) {
+        flex-direction: row; /* Asegurar que los elementos sigan en fila */
+        justify-content: space-between; /* Mantener el logo a la izquierda y el menú a la derecha */
+        align-items: center;
+
+        a img {
+            max-width: 40%; /* Hacer más grande el logo en móviles */
+        }
+
+        .hamburger-menu .menu-icon {
+            margin-left: auto; /* Mantener el icono de hamburguesa alineado a la derecha */
+        }
+
+        .nav-mobile {
+            width: 100%;
+        }
+    }
+}
