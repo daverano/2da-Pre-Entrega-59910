@@ -1,0 +1,18 @@
+/* Estilos Generales */
+body{
+    font-family: $font-family;
+    color: $primary-color;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-family;
+    color: $primary-color;
+}
+
+a{
+    color: $link-color;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}

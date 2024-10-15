@@ -41,12 +41,8 @@ header {
   /* Media query para pantallas de hasta 768px */
   /* Media query para pantallas de hasta 576px */
 }
-header a {
-  display: inline-block;
-  text-decoration: none; /* Eliminar subrayado del enlace */
-}
-header a img {
-  max-width: 35%;
+header img {
+  max-width: 20%;
   object-fit: contain;
   margin-right: auto; /* Asegura que el logo quede alineado a la izquierda */
   clip-path: inset(35% 12% 35% 15%);
@@ -117,7 +113,7 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
   header .hamburger-menu {
     display: block; /* Mostrar el menú hamburguesa en pantallas pequeñas */
   }
-  header a img {
+  header img {
     max-width: 30%; /* Ajustar el tamaño del logo en pantallas pequeñas */
   }
 }
@@ -127,7 +123,7 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
     justify-content: space-between; /* Mantener el logo a la izquierda y el menú a la derecha */
     align-items: center;
   }
-  header a img {
+  header img {
     max-width: 40%; /* Hacer más grande el logo en móviles */
   }
   header .hamburger-menu .menu-icon {
@@ -136,13 +132,6 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
   header .nav-mobile {
     width: 100%;
   }
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* Estilos Main Home */
@@ -164,7 +153,7 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
   font-weight: bold;
   z-index: 1;
   text-align: center;
-  max-width: 100%;
+  max-width: 90%;
   margin-top: 0;
   white-space: nowrap; /* Mantener en una sola línea */
   overflow: hidden;
@@ -186,15 +175,14 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
 }
 @media (max-width: 768px) {
   .main-banner h1 {
-    font-size: clamp(1.2rem, 3vw, 2.5rem); /* Escalabilidad con clamp */
-    top: 18%;
-    max-width: 100%;
+    font-size: clamp(2rem, 4vw, 2.5rem); /* Escalabilidad con clamp */
+    top: 25%;
   }
 }
 @media (max-width: 576px) {
   .main-banner h1 {
-    font-size: clamp(0.6rem, 1vw, 1rem); /* Escalabilidad para pantallas más pequeñas */
-    top: 25%;
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Escalabilidad para pantallas más pequeñas */
+    top: 20%;
   }
 }
 
@@ -210,9 +198,6 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
   margin-bottom: -100px;
   margin-top: -5px;
   padding: 0;
-  overflow: hidden; /* Aseguramos que no haya desbordamiento horizontal */
-  /* Media query para pantallas de 600px o menos */
-  /* Media query para pantallas muy pequeñas (hasta 450px) */
 }
 .supplementary-banners img {
   width: 18%;
@@ -221,31 +206,6 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
   margin-right: 10px;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 600px) {
-  .supplementary-banners {
-    top: 0; /* Ajuste para alinear los banners debajo del principal */
-    margin-top: 1rem;
-    margin-bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between; /* Distribuir imágenes uniformemente */
-    flex-wrap: nowrap; /* Aseguramos que las imágenes permanezcan en una línea */
-    overflow-x: auto; /* Habilitar desplazamiento horizontal si es necesario */
-    padding: 0 1rem; /* Agregar padding lateral para que no queden pegadas a los bordes */
-  }
-  .supplementary-banners img {
-    width: 18%; /* Ajustamos el tamaño de las imágenes para mantenerlas en una fila */
-    max-width: 18%;
-    margin-right: 0; /* Eliminamos espacio adicional entre imágenes */
-  }
-}
-@media (max-width: 450px) {
-  .supplementary-banners img {
-    width: 18%; /* Mantener un tamaño consistente para pantallas muy pequeñas */
-    max-width: 18%; /* Evitar que las imágenes sobrepasen el ancho del banner */
-  }
 }
 
 /* Categorías */
@@ -333,7 +293,6 @@ main.index .about-us {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  /* Cambiar disposición para pantallas pequeñas */
 }
 main.index .about-us img {
   max-width: 30%;
@@ -382,138 +341,101 @@ main.index .about-us .about-us-text a:hover {
   }
   main.index .about-us .about-us-text p {
     font-size: 0.85rem;
-    line-height: 1rem;
   }
-  main.index .about-us .about-us-text a {
-    font-size: 0.9rem; /* Ajusta el tamaño de la fuente del enlace */
-    line-height: 0.2rem; /* Ajusta el interlineado */
-  }
-}
-@media (max-width: 576px) {
-  main.index .about-us {
-    flex-direction: column; /* Cambiar a disposición en columna */
-    align-items: center; /* Centrar elementos en columna */
-  }
-  main.index .about-us img {
-    max-width: 80%; /* Ajustar tamaño de la imagen */
-    margin-left: 0; /* Alinear imagen al centro */
-    margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
-  }
-  main.index .about-us .about-us-text {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* Estilos Main Conócenos */
 main.get-to-know-us {
-  /* Estructura de la sección principal */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-  background-color: #ffffff; /* Fondo blanco */
-  /* Sección de "Conócenos" */
+  background-color: #ffffff;
+  /* Estilos generales para la sección */
   /* Media queries para pantallas medianas (max-width: 768px) */
-  /* Media queries para pantallas pequeñas (max-width: 580px) */
+  /* Media queries para pantallas pequeñas (max-width: 576px) */
 }
 main.get-to-know-us .get-to-know-us {
   margin: 0;
   padding: 0;
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
-  position: relative;
-  /* Estilos del título principal (h1) */
-  /* Estilos de la imagen de fondo */
+  width: 100vw;
 }
 main.get-to-know-us .get-to-know-us h1 {
   position: absolute;
-  top: 15%; /* Aseguramos que siempre esté en la parte superior */
+  top: 25%;
   left: 50%;
-  transform: translateX(-50%); /* Centra el título horizontalmente */
-  color: #ffffff; /* Texto blanco */
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño dinámico de fuente */
-  font-weight: bold; /* Negrita */
-  z-index: 1; /* Sobre la imagen */
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 1;
   text-align: center;
-  max-width: 100%; /* Para que el título no se desborde */
+  max-width: 90%;
   margin-top: 0;
-  white-space: nowrap; /* Mantener el texto en una sola línea */
-  overflow: hidden; /* Oculta el desbordamiento */
-  text-overflow: ellipsis; /* Agrega "..." si el texto es demasiado largo */
 }
 main.get-to-know-us .get-to-know-us img {
-  max-height: 800px; /* Altura máxima de 800px */
-  height: 100%; /* Ajusta la altura automáticamente */
-  width: 100%; /* Ocupa el 100% del ancho */
-  object-fit: cover; /* La imagen se adapta al contenedor sin deformarse */
+  max-height: 800px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 @media (max-width: 768px) {
   main.get-to-know-us .get-to-know-us h1 {
-    font-size: clamp(2rem, 4vw, 2.5rem); /* Tamaño dinámico menor */
-    top: 25%; /* Ajustamos la posición del título */
+    font-size: 2rem; /* Reducimos el tamaño del texto */
+    top: 35%; /* Ajustamos la posición superior */
+  }
+  main.get-to-know-us .get-to-know-us img {
+    max-height: 350px; /* Reducimos la altura de la imagen */
   }
 }
 @media (max-width: 576px) {
   main.get-to-know-us .get-to-know-us h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Escalabilidad para pantallas más pequeñas */
-    top: 20%;
+    font-size: 1.75rem; /* Ajustamos más el tamaño del texto */
+    margin-top: 50%; /* Ajustamos la posición superior */
+  }
+  main.get-to-know-us .get-to-know-us img {
+    max-height: 250px; /* Imagen más pequeña en pantallas pequeñas */
   }
 }
 
-/* Estilos de Maighty */
+/* Estilos para la sección "Mighty" */
 main.get-to-know-us .Mighty {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   width: 100%;
-  padding-left: 4rem; /* Padding en el lado izquierdo */
-  padding-right: 4rem; /* Padding en el lado derecho */
-  /* Estilos del título (h2) */
-  /* Estilos del texto descriptivo (p) */
-  /* Estilos de la imagen */
+  margin-left: 4%;
   /* Media queries para pantallas medianas (max-width: 768px) */
   /* Media queries para pantallas pequeñas (max-width: 576px) */
 }
 main.get-to-know-us .Mighty h2 {
-  font-size: 2rem; /* Tamaño del título */
-  color: #6200ea; /* Color del título */
+  font-size: 2rem;
+  color: #6200ea;
   margin-bottom: 1rem;
   text-align: center;
 }
 main.get-to-know-us .Mighty p {
-  font-size: 1.2rem; /* Tamaño del texto */
-  color: #333; /* Color del texto */
-  text-align: justify; /* Justificado */
+  font-size: 1.5rem;
+  color: #333;
+  text-align: justify;
 }
 main.get-to-know-us .Mighty img {
   max-height: 400px;
-  height: auto;
-  width: 100%;
-  object-fit: contain;
-  align-self: center; /* Centra verticalmente */
-  justify-self: center; /* Centra horizontalmente */
+  height: 100%;
+  width: 80%;
+  max-width: 80%;
+  align-self: center;
+  justify-self: center;
 }
 @media (max-width: 768px) {
   main.get-to-know-us .Mighty {
-    grid-template-columns: repeat(2, 2fr); /* Una columna en pantallas medianas */
-    padding-left: 2rem; /* Ajuste de padding para pantallas medianas */
-    padding-right: 2rem;
+    grid-template-columns: 1fr; /* Una columna en pantallas medianas */
   }
   main.get-to-know-us .Mighty img {
-    max-height: 800px;
-    height: auto;
-    width: 100%;
-    object-fit: contain; /* Ajustamos el tamaño de la imagen */
+    max-height: 300px; /* Ajustamos el tamaño de la imagen */
   }
   main.get-to-know-us .Mighty p {
-    font-size: 1rem; /* Reducimos el tamaño del texto */
+    font-size: 1.25rem; /* Reducimos el tamaño del texto */
   }
   main.get-to-know-us .Mighty h2 {
     font-size: 1.75rem; /* Ajustamos el tamaño del título */
@@ -522,29 +444,24 @@ main.get-to-know-us .Mighty img {
 @media (max-width: 576px) {
   main.get-to-know-us .Mighty {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-    padding-left: 1rem; /* Ajuste de padding para pantallas pequeñas */
-    padding-right: 1rem;
   }
   main.get-to-know-us .Mighty img {
-    max-height: 400px; /* Imagen más pequeña en pantallas pequeñas */
-    height: auto;
-    width: 100%;
-    object-fit: contain;
+    max-height: 200px; /* Imagen más pequeña en pantallas pequeñas */
   }
   main.get-to-know-us .Mighty p {
-    font-size: 1rem; /* Reducimos aún más el tamaño del texto */
+    font-size: 1.1rem; /* Reducimos aún más el tamaño del texto */
   }
   main.get-to-know-us .Mighty h2 {
     font-size: 1.5rem; /* Título más pequeño */
   }
 }
 
-/* Sección "Valores" */
+/* Estilos para la sección de "Valores" */
 main.get-to-know-us .values {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
   gap: 2rem;
-  width: 90%;
+  width: 100%;
   text-align: center;
   margin-bottom: 2rem;
   /* Media queries para pantallas medianas (max-width: 768px) */
@@ -552,7 +469,7 @@ main.get-to-know-us .values {
 }
 @media (max-width: 768px) {
   main.get-to-know-us .values {
-    grid-template-columns: repeat(1, 1fr); /* Cambiar a una columna en pantallas medianas */
+    grid-template-columns: 1fr 1fr; /* Cambiamos a dos columnas en pantallas medianas */
   }
 }
 @media (max-width: 576px) {
@@ -562,9 +479,6 @@ main.get-to-know-us .values {
   }
 }
 main.get-to-know-us .values-section {
-  /* Título de cada valor */
-  /* Descripción del valor */
-  /* Imagen del valor */
   /* Media queries para pantallas medianas (max-width: 768px) */
   /* Media queries para pantallas pequeñas (max-width: 576px) */
 }
@@ -580,23 +494,9 @@ main.get-to-know-us .values-section p {
   padding: 0.5rem;
 }
 main.get-to-know-us .values-section img {
-  width: 100%; /* Ancho completo por defecto */
+  width: 100%;
   margin: 1rem auto;
   align-items: center;
-  /* Media queries para pantallas medianas (max-width: 768px) */
-  /* Media queries para pantallas pequeñas (max-width: 576px) */
-}
-@media (max-width: 768px) {
-  main.get-to-know-us .values-section img {
-    width: 75%; /* Reducimos el ancho de la imagen al 75% en pantallas medianas */
-    height: auto; /* Asegura que la altura se ajuste automáticamente */
-  }
-}
-@media (max-width: 576px) {
-  main.get-to-know-us .values-section img {
-    width: 50%; /* Reducimos aún más el ancho de la imagen al 50% en pantallas pequeñas */
-    height: auto; /* Mantener la altura automática */
-  }
 }
 @media (max-width: 768px) {
   main.get-to-know-us .values-section h2 {
@@ -615,20 +515,10 @@ main.get-to-know-us .values-section img {
   }
 }
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Estilos generales para la tienda */
 main.store {
-  margin: 0;
-  padding: 0;
+  margin-top: 4%;
   background-color: #333;
-  padding-top: 4rem;
-  /* Aplicar padding dinámico para el contenedor */
   /* Sección de categorías - barra superior (solo para tienda) */
   /* Estilos generales de la clasificación */
   /* Estilos de títulos para las secciones de productos (solo en tienda) */
@@ -636,23 +526,6 @@ main.store {
   /* Estilos de cada producto */
   /* Media queries para pantallas medianas (hasta 768px) */
   /* Media queries para pantallas pequeñas (hasta 576px) */
-  /* Nueva media query para pantallas más pequeñas (hasta 450px) */
-}
-@media (max-width: 768px) {
-  main.store {
-    padding-top: 2rem; /* Reducimos el espacio superior en pantallas medianas */
-    width: 100vw; /* Ocupa el 100% del ancho de la pantalla */
-    margin: 0;
-    padding: 0 1rem; /* Agregamos padding para los lados */
-  }
-}
-@media (max-width: 576px) {
-  main.store {
-    padding-top: 1.5rem; /* Menos espacio en pantallas más pequeñas */
-    width: 100vw; /* Ocupa el 100% del ancho de la pantalla */
-    margin: 0;
-    padding: 0 1rem; /* Agregamos padding para los lados */
-  }
 }
 main.store .our-products {
   display: flex;
@@ -660,45 +533,35 @@ main.store .our-products {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 1rem 0;
+  padding: 0;
   /* Título "Nuestros Productos" */
 }
 main.store .our-products h1 {
-  font-size: 1.6rem;
-  /* Usar mixin para tipografía responsive */
+  font-size: 4rem;
   color: #ffffff;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.2rem 0;
+  padding: 0.5rem 0;
   border-bottom: 0.18rem solid #333;
-  height: auto;
-}
-@media (max-width: 768px) {
-  main.store .our-products h1 {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 576px) {
-  main.store .our-products h1 {
-    font-size: 1.2rem;
-  }
+  height: 20%;
+  line-height: 4rem;
+  margin-top: 3.5%;
 }
 main.store .categories {
   margin-top: auto;
   width: 100%;
   background-color: #6200ea;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   height: 10%;
-  margin-top: 0;
 }
 main.store .categories ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 100%;
+  max-width: 1000px;
   padding: 0;
   margin: 0 auto;
   list-style: none;
@@ -738,23 +601,12 @@ main.store .product-section h2 {
 main.store .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* Usar mixin para grid responsive */
   gap: 4rem;
-}
-@media (max-width: 768px) {
-  main.store .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  main.store .product-grid {
-    grid-template-columns: 1fr;
-  }
 }
 main.store .product-item {
   background-color: #ffffff;
   border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Mantener box-shadow como está */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease;
@@ -783,30 +635,25 @@ main.store .product-item p {
 main.store .product-item button {
   background-color: #C03A3A;
   color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
   border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 0.875rem;
   transition: background-color 0.3s ease;
-  /* Aplicar mixin para botones */
-  font-size: 0.5rem;
 }
 main.store .product-item button:hover {
   background-color: #A12C2C;
 }
 @media (max-width: 768px) {
-  main.store {
-    margin-top: 4rem; /* Reducimos el espacio superior en pantallas medianas */
-    max-width: 100vw; /* Ocupa un 100% del ancho de la pantalla */
-    width: 100%;
-    padding: 0;
-  }
   main.store .product-grid {
-    grid-template-columns: repeat(3, 1fr); /* Cambiamos a dos columnas */
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr); /* Cambiamos a dos columnas */
+    gap: 2rem;
   }
   main.store .our-products h1 {
     font-size: 2rem; /* Reducimos el tamaño del título */
+    margin-top: 5%;
   }
   main.store .categories ul li {
     font-size: 0.9rem; /* Reducimos el tamaño de fuente de los enlaces */
@@ -823,22 +670,16 @@ main.store .product-item button:hover {
   main.store .product-item button {
     font-size: 0.8rem; /* Reducimos el tamaño de los botones */
     padding: 0.4rem 0.8rem;
-    margin-top: 0.5rem;
   }
 }
 @media (max-width: 576px) {
-  main.store {
-    margin-top: 4rem; /* Menos espacio en pantallas más pequeñas */
-    max-width: 100vw;
-    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
-    padding: 0;
-  }
   main.store .product-grid {
-    grid-template-columns: 1fr; /* Cambiamos a una columna para pantallas muy pequeñas */
-    gap: 1rem; /* Aumentamos el espacio entre productos */
+    grid-template-columns: 1fr; /* Cambiamos a una columna */
+    gap: 1.5rem;
   }
   main.store .our-products h1 {
-    font-size: 1rem; /* Reducimos aún más el tamaño del título */
+    font-size: 2rem; /* Reducimos aún más el tamaño del título */
+    margin-top: 10%;
   }
   main.store .categories ul li {
     font-size: 0.85rem; /* Ajustamos el tamaño de fuente en móviles */
@@ -847,57 +688,15 @@ main.store .product-item button:hover {
     font-size: 1rem; /* Reducimos el tamaño del título del producto */
   }
   main.store .product-item img {
-    max-width: 100px; /* Reducimos aún más el tamaño de la imagen */
+    max-width: 200px; /* Reducimos aún más el tamaño de la imagen */
   }
   main.store .product-item p {
-    font-size: 0.8rem; /* Reducimos el tamaño del texto */
-    justify-content: center;
+    font-size: 0.75rem; /* Reducimos el tamaño del texto */
   }
   main.store .product-item button {
     font-size: 0.75rem; /* Reducimos el tamaño de los botones */
     padding: 0.3rem 0.6rem;
-    margin-top: 0.5rem;
   }
-}
-@media (max-width: 450px) {
-  main.store {
-    margin-top: 4rem; /* Ajuste adicional del espacio superior */
-    max-width: 100vw;
-    width: 100%;
-    padding: 0rem; /* Aumentamos el padding para evitar que quede pegado al borde */
-  }
-  main.store .product-grid {
-    grid-template-columns: 1fr; /* Cambiamos a una sola columna */
-    gap: 1rem; /* Reducimos el espacio entre los productos */
-  }
-  main.store .our-products h1 {
-    font-size: 0.9rem; /* Reducimos aún más el tamaño del título */
-    align-items: center;
-  }
-  main.store .categories ul li {
-    font-size: 0.75rem; /* Ajustamos el tamaño de fuente */
-  }
-  main.store .product-item h3 {
-    font-size: 0.9rem; /* Reducimos el tamaño del título del producto */
-  }
-  main.store .product-item img {
-    max-width: 80px; /* Reducimos el tamaño de la imagen */
-  }
-  main.store .product-item p {
-    font-size: 0.8rem; /* Reducimos el tamaño del texto */
-    justify-content: center;
-  }
-  main.store .product-item button {
-    font-size: 0.65rem; /* Reducimos el tamaño de los botones */
-    padding: 0.25rem 0.5rem;
-  }
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 main.customize-your-hoodie {
@@ -907,7 +706,7 @@ main.customize-your-hoodie {
   padding: 2rem;
   background-color: #ffffff;
   width: 100%;
-  margin-top: 4%;
+  margin-top: 2%;
   /* Contenedor de herramientas de diseño */
   /* Sección de herramientas de diseño */
   /* Opciones de diseño */
@@ -933,24 +732,13 @@ main.customize-your-hoodie .customize-section h1 {
   padding: 1rem 0;
   margin: 0;
   font-size: 2rem;
-  /* Usamos el mixin */
   text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  main.customize-your-hoodie .customize-section h1 {
-    font-size: 1.75rem;
-  }
-}
-@media (max-width: 576px) {
-  main.customize-your-hoodie .customize-section h1 {
-    font-size: 1.5rem;
-  }
 }
 main.customize-your-hoodie .customize-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  padding: 1rem;
   box-sizing: border-box;
   align-items: flex-end;
 }
@@ -997,20 +785,9 @@ main.customize-your-hoodie .design-preview img {
 main.customize-your-hoodie .design-options {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  /* Usamos el mixin de grid */
-  gap: 0.9rem;
+  gap: 0.5rem;
   justify-content: center;
   width: 100%;
-}
-@media (max-width: 768px) {
-  main.customize-your-hoodie .design-options {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  main.customize-your-hoodie .design-options {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 main.customize-your-hoodie .design-options button {
   width: 2rem;
@@ -1026,16 +803,16 @@ main.customize-your-hoodie .design-options button {
 }
 main.customize-your-hoodie .design-options button img {
   width: 1.5rem;
-  height: 1.5rem; /* Iconos pequeños no se cambian */
+  height: 1.5rem;
 }
 main.customize-your-hoodie .design-options button:hover {
   background-color: #f0f0f0;
 }
 main.customize-your-hoodie .form {
-  width: 50%;
+  width: 38%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.375rem rgb(0, 0, 0);
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.5);
   border: #000000;
 }
 main.customize-your-hoodie .customer-info form {
@@ -1078,18 +855,16 @@ main.customize-your-hoodie .customer-info textarea {
 main.customize-your-hoodie .customer-info button {
   background-color: #6200ea;
   color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  /* Aplicamos el mixin de botón */
   padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
   margin: 0 auto;
   margin-top: 1rem;
   display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
 }
 main.customize-your-hoodie .customer-info button:hover {
   background-color: #582F7E;
@@ -1098,32 +873,32 @@ main.customize-your-hoodie .customer-info button:hover {
   main.customize-your-hoodie {
     padding: 1rem;
     flex-direction: column;
-    margin-top: 8%;
+    margin-top: 5%;
   }
   main.customize-your-hoodie .customize-container {
     flex-direction: column;
     align-items: center;
   }
   main.customize-your-hoodie .form {
-    width: 100%;
+    width: 70%;
     padding: 1rem;
   }
   main.customize-your-hoodie .design-options {
-    grid-template-columns: repeat(5, 1fr); /* Reducción de columnas */
+    grid-template-columns: repeat(5, 1fr);
   }
   main.customize-your-hoodie .design-tools select {
-    width: 40%; /* Ajustamos el ancho del select */
+    width: 40%;
   }
 }
 @media (max-width: 576px) {
   main.customize-your-hoodie {
     padding: 1rem;
     flex-direction: column;
-    margin-top: 15%;
+    margin-top: 10%;
   }
   main.customize-your-hoodie .customize-section h1 {
     font-size: 1.5rem;
-    padding: 0.8rem;
+    padding: 0.5rem;
   }
   main.customize-your-hoodie .customize-container {
     flex-direction: column;
@@ -1134,13 +909,13 @@ main.customize-your-hoodie .customer-info button:hover {
     padding: 0.5rem;
   }
   main.customize-your-hoodie .design-options {
-    grid-template-columns: repeat(3, 1fr); /* Reducción de columnas */
+    grid-template-columns: repeat(3, 1fr);
   }
   main.customize-your-hoodie .design-tools select {
-    width: 60%; /* Ajustamos el ancho del select */
+    width: 60%;
   }
   main.customize-your-hoodie .design-preview img {
-    height: 200px; /* Reducción del tamaño de la imagen */
+    height: 200px;
   }
 }
 
@@ -1153,7 +928,7 @@ footer {
   color: #ffffff;
   /* Media queries para pantallas medianas */
   /* Media queries para pantallas pequeñas */
-  /* Nueva media query para pantallas de 500px o menos */
+  /* Media query para pantallas de 448px o menos */
 }
 footer .footer-content {
   display: flex;
@@ -1275,7 +1050,7 @@ footer p {
     align-items: center;
   }
   footer .footer-links ul, footer .social-media ul {
-    justify-content: center; /* Alinea los íconos al centro */
+    justify-content: center;
   }
   footer .footer-links ul li, footer .social-media ul li {
     margin: 0 0.5rem;
@@ -1284,7 +1059,7 @@ footer p {
     font-size: 0.7rem;
   }
   footer .social-media h3 {
-    text-align: center; /* Centrar el título "REDES SOCIALES" */
+    text-align: center;
     font-size: 0.875rem;
   }
   footer p {
@@ -1303,7 +1078,7 @@ footer p {
     margin-bottom: 1rem;
   }
   footer .footer-links ul, footer .social-media ul {
-    justify-content: center; /* Alinea los íconos al centro */
+    justify-content: center;
     flex-wrap: nowrap;
     gap: 1rem;
   }
@@ -1318,20 +1093,26 @@ footer p {
   }
   footer .social-media h3 {
     font-size: 0.75rem;
-    text-align: center; /* Centrar el título "REDES SOCIALES" */
+    text-align: center;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 448px) {
   footer .footer-links ul {
     flex-direction: column; /* Coloca los enlaces uno debajo del otro */
-    align-items: center; /* Centra los enlaces */
+    align-items: center;
   }
   footer .footer-links ul li {
     margin: 0.5rem 0; /* Espaciado entre los elementos */
   }
   footer .social-media ul {
-    justify-content: center; /* Mantén los íconos alineados */
+    justify-content: center; /* Mantén los íconos al lado del otro */
+  }
+  footer .footer-links {
+    font-size: 0.6rem; /* Ajusta el tamaño del texto en pantallas muy pequeñas */
+  }
+  footer .social-media h3 {
+    font-size: 0.7rem;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stayl.css.map */

@@ -1,0 +1,48 @@
+// Archivo: _mixins.scss
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsive-font($small, $medium, $large) {
+    font-size: $large;
+
+    @media (max-width: 768px) {
+        font-size: $medium;
+    }
+    @media (max-width: 576px) {
+        font-size: $small;
+    }
+}
+
+@mixin boton($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+@mixin responsive-grid($columns-large, $columns-medium, $columns-small) {
+    grid-template-columns: $columns-large;
+
+    @media (max-width: 768px) {
+        grid-template-columns: $columns-medium;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: $columns-small;
+    }
+}
+
+@mixin sombra($color, $opacidad) {
+    box-shadow: 0px 4px 8px rgba($color, $opacidad);
+}
