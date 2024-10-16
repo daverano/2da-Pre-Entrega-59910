@@ -51,9 +51,10 @@
 
     /* Media query para pantallas pequeñas */
     @media (max-width: 576px) {
+        margin-top: 70px;
         h1 {
             font-size: clamp(0.6rem, 1vw, 1rem); /* Escalabilidad para pantallas más pequeñas */
-            top: 25%;
+            top: 18%;
         }
     }
 }

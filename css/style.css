@@ -192,9 +192,12 @@ header .hamburger-menu #menu-toggle:checked + .menu-icon + .nav-mobile {
   }
 }
 @media (max-width: 576px) {
+  .main-banner {
+    margin-top: 70px;
+  }
   .main-banner h1 {
     font-size: clamp(0.6rem, 1vw, 1rem); /* Escalabilidad para pantallas más pequeñas */
-    top: 25%;
+    top: 18%;
   }
 }
 
@@ -420,6 +423,7 @@ main.get-to-know-us {
   align-items: center;
   gap: 4rem;
   background-color: #ffffff; /* Fondo blanco */
+  margin-top: 70px;
   /* Sección de "Conócenos" */
   /* Media queries para pantallas medianas (max-width: 768px) */
   /* Media queries para pantallas pequeñas (max-width: 580px) */
@@ -455,15 +459,21 @@ main.get-to-know-us .get-to-know-us img {
   object-fit: cover; /* La imagen se adapta al contenedor sin deformarse */
 }
 @media (max-width: 768px) {
+  main.get-to-know-us {
+    margin-top: 70px;
+  }
   main.get-to-know-us .get-to-know-us h1 {
-    font-size: clamp(2rem, 4vw, 2.5rem); /* Tamaño dinámico menor */
+    font-size: clamp(1.2rem, 3vw, 2.5rem); /* Tamaño dinámico menor */
     top: 25%; /* Ajustamos la posición del título */
   }
 }
 @media (max-width: 576px) {
+  main.get-to-know-us {
+    margin-top: 70px;
+  }
   main.get-to-know-us .get-to-know-us h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Escalabilidad para pantallas más pequeñas */
-    top: 20%;
+    font-size: clamp(0.6rem, 1vw, 1rem); /* Escalabilidad para pantallas más pequeñas */
+    top: 16%;
   }
 }
 
@@ -1025,8 +1035,8 @@ main.customize-your-hoodie .design-options button {
   transition: background-color 0.3s ease;
 }
 main.customize-your-hoodie .design-options button img {
-  width: 1.5rem;
-  height: 1.5rem; /* Iconos pequeños no se cambian */
+  width: 40px;
+  height: 40px; /* Iconos pequeños no se cambian */
 }
 main.customize-your-hoodie .design-options button:hover {
   background-color: #f0f0f0;

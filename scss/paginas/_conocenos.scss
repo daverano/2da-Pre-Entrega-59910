@@ -10,6 +10,7 @@ main.get-to-know-us {
     align-items: center;
     gap: 4rem;
     background-color: $white; /* Fondo blanco */
+    margin-top: 70px;
 
     /* Sección de "Conócenos" */
     .get-to-know-us {
@@ -47,9 +48,10 @@ main.get-to-know-us {
 
     /* Media queries para pantallas medianas (max-width: 768px) */
     @media (max-width: 768px) {
+        margin-top: 70px;
         .get-to-know-us {
             h1 {
-                font-size: clamp(2rem, 4vw, 2.5rem); /* Tamaño dinámico menor */
+                font-size: clamp(1.2rem, 3vw, 2.5rem); /* Tamaño dinámico menor */
                 top: 25%; /* Ajustamos la posición del título */
             }
         }
@@ -57,10 +59,11 @@ main.get-to-know-us {
 
     /* Media queries para pantallas pequeñas (max-width: 580px) */
     @media (max-width: 576px) {
+        margin-top: 70px;
         .get-to-know-us {
             h1 {
-                font-size: clamp(1.5rem, 4vw, 2rem); /* Escalabilidad para pantallas más pequeñas */
-                top: 20%;
+                font-size: clamp(0.6rem, 1vw, 1rem); /* Escalabilidad para pantallas más pequeñas */
+                top: 16%;
             }
         }
     }
